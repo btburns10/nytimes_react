@@ -10,7 +10,10 @@ class SavedArticles extends Component {
 
 componentDidMount() {
   axios.get("/api/articles")
-    .then(res => this.setState({ articles: res.data }))
+    .then(res => {
+      console.log(res)
+      this.setState({ articles: res.data })
+    })
     .catch(err => console.log(err))
 }
 
