@@ -27,7 +27,7 @@ class Comment extends Component {
     const note = {body: this.state.note};
 
     axios.post("/api/articles/" + id, note)
-      .then(res => console.log(res.data))
+      .then(res => this.setState({ note: res.data.body }))
       .catch(err => console.log(err));
   }
 
