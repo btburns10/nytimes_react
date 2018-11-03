@@ -8,21 +8,21 @@ class SavedArticles extends Component {
    articles: []
  }
 
-  componentDidMount() {
-    axios.get("/api/articles")
-      .then(res => this.setState({ articles: res.data }))
-      .catch(err => console.log(err))
-  }
+componentDidMount() {
+  axios.get("/api/articles")
+    .then(res => this.setState({ articles: res.data }))
+    .catch(err => console.log(err))
+}
 
-  render() {
-    return(
-      <div className="container">
-        {this.state.articles.map(article => {
-          return <SavedArticle key={article._id} article={article} />
-        })}
-      </div>
-    )
-  }
+render() {
+  return(
+    <div className="container">
+    {this.state.articles && this.state.articles.map(article => {
+        return <SavedArticle key={article._id} article={article} />
+      })}
+    </div>
+  )
+}
   
 };
 
