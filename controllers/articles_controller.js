@@ -14,7 +14,10 @@ router.post("/api/articles", (req, res) => {
 router.get("/api/articles", (req, res) => {
   db.Article.find({})
     .populate("note")
-    .then(dbArticles => res.json(dbArticles))
+    .then(dbArticles => {
+      console.log(dbArticles)
+      res.json(dbArticles)
+    })
     .catch(err => console.log(err))
 });
 
