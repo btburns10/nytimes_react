@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = (props) => (
+const Navbar = () => (
 
 <nav>
   <div className='nav-wrapper #bbdefb blue lighten-4'>
-    <a href='/' className='brand-logo right'>NY Times News</a>
+    <Link to='/' className='brand-logo right'>NY Times News</Link>
     <ul id='nav-mobile' className='left hide-on-med-and-down'>
-      <li><a href='/'>Home</a></li>
-      <li><a href='/api/articles'>Saved Articles</a></li>
-      <li><a href='/' className='waves-effect waves-light btn #4fc3f7 light-blue lighten-2'>
-        <i className='material-icons'>refresh</i></a>
+      <li><Link to='/'>Home</Link></li>
+      <li><Link to='/api/articles'>Saved Articles</Link></li>
+      <li><Link to='/' className='waves-effect waves-light btn #4fc3f7 light-blue lighten-2'>
+        <i className='material-icons'>refresh</i></Link>
       </li>
     </ul>
   </div>
