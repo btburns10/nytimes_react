@@ -2,7 +2,7 @@
   "name": "nytimes_react",
   "version": "1.0.0",
   "description": "MERN application for news",
-  "main": "index.js",
+  "main": "server/server.js",
   "repository": "https://github.com/btburns10/nytimes_react.git",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
