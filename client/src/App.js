@@ -10,7 +10,7 @@ const App = () => (
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/api/articles" component={SavedArticles} />
+        <Route exact path="/articles" component={SavedArticles} />
       </Switch>
     </div>
   </Router>

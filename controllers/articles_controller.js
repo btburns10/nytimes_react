@@ -5,6 +5,7 @@ const db = require ("../models");
 
 
 router.post("/api/articles", (req, res) => {
+  console.log("saving on back end " + req.body);
   db.Article 
     .create(req.body) 
     .then(dbArticle => res.json(dbArticle))
@@ -12,6 +13,7 @@ router.post("/api/articles", (req, res) => {
 });
 
 router.get("/api/articles", (req, res) => {
+  console.log("home back route");
   db.Article.find({})
     .populate("note")
     .then(dbArticles => {
@@ -36,9 +38,6 @@ router.post("/api/articles/:id", function(req, res) {
     });
 });
 
-router.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
-});
 
 
 module.exports = router;
