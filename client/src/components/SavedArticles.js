@@ -15,10 +15,11 @@ componentDidMount() {
 }
 
 render() {
+  console.log(this.state.articles);
   return(
     <div className="container">
-    {this.state.articles && this.state.articles.map(article => {
-        return <SavedArticle key={article._id} article={article} />
+      {this.state.articles && this.state.articles.map(article => {
+          return <SavedArticle key={article._id} article={article} />
       })}
     </div>
   )
