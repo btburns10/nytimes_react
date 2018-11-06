@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import SavedArticles from "./components/SavedArticles";
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <div>
       <Navbar />
       <Switch>
@@ -13,7 +13,7 @@ const App = () => (
         <Route exact path="/articles" component={SavedArticles} />
       </Switch>
     </div>
-  </Router>
+  </BrowserRouter>
     
   
 )

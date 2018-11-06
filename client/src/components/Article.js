@@ -20,7 +20,7 @@ saveArticle = () => {
 
 render() {
   return(
-    <div className="col s12 l4" key={this.props.article._id}>
+    <div className="col s12 m6 l4" key={this.props.article._id}>
       <div className="card" data-attr={this.props.article._id} style={{height: 560}}>
         <div className="card-image waves-effect waves-block waves-light">
           <img className="image" style={{height: 285}}
